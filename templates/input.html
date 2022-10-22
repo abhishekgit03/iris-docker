@@ -1,11 +1,35 @@
-<html>
-   <body>
-      <form action = "{{ url_for('sepalpetal')}}" method = "POST">
-         <p>Enter SepalLengthCm: <input type = "text" name = "SepalLength" /></p>
-         <p>Enter SepalWidthCm: <input type = "text" name = "SepalWidth" /></p>
-         <p>Enter PetalLengthCm: <input type = "text" name = "PetalLength" /></p>
-         <p>Enter PetalWidthCm: <input type ="text" name = "PetalWidth" /></p>
-         <p><input type = "submit" value = "submit" /></p>
-      </form>
-   </body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet"  href="{{ url_for('static',filename='styles/styles.css')}}">
+   
+</head>
+<body>
+
+         <h1 class="headline">Iris Flower Prediction Model</h1>
+         <div class="headings">
+            <h1 class="sub-headline">Iris flower classification is a very popular machine learning project. The iris dataset contains three classes of flowers, Versicolor, Setosa, Virginica, and each class contains 4 features, ‘Sepal length’, ‘Sepal width’, ‘Petal length’, ‘Petal width’. The aim of the iris flower classification is to predict flowers based on their specific features.</h1>
+            
+        </div>
+      <div class="container">
+         <form action = "{{ url_for('sepalpetal')}}" method = "POST">
+            <div class="inputbox">
+               <div class="inputs">
+                  <p>Enter Sepal Length: <input type = "text" name = "SepalLength" /></p>
+                  <p>Enter Sepal Width: <input type = "text" name = "SepalWidth" /></p>
+                  <p>Enter Petal Length: <input type = "text" name = "PetalLength" /></p>
+                  <p>Enter Petal Width: <input type ="text" name = "PetalWidth" /></p>
+            </div>
+                  <p><input type = "submit" value = "Submit" /></p>
+               </div>
+         </form>
+      </div>
+      <h1 class="sub-headline2">This application is containerized using  
+         <img src="https://res.cloudinary.com/crunchbase-production/image/upload/c_lpad,f_auto,q_auto:eco,dpr_1/ywjqppks5ffcnbfjuttq" width="4%"/>
+           and hosted on Heroku</h1>
+
+</body>
 </html>
